@@ -29,25 +29,31 @@
 
 1. Создать Deployment приложения _frontend_ из образа nginx с количеством реплик 3 шт.
 
-[frontend]
+[frontend](https://github.com/Fe1br0/kube-homeworks/blob/main/1.5/frontend.yaml)
 
+![1](https://github.com/Fe1br0/kube-homeworks/assets/106814458/d1082877-2d41-4e6e-80f1-2c2bbd947856)
 
 
 2. Создать Deployment приложения _backend_ из образа multitool. 
 
-[backend]
+[backend](https://github.com/Fe1br0/kube-homeworks/blob/main/1.5/backend.yaml)
+
+
+![2](https://github.com/Fe1br0/kube-homeworks/assets/106814458/5251e25b-fbae-465e-9165-dd4026218e55)
 
 
 3. Добавить Service, которые обеспечат доступ к обоим приложениям внутри кластера. 
 
-[service-backend]
+[service-backend](https://github.com/Fe1br0/kube-homeworks/blob/main/1.5/service-backend.yaml)
 
-[service-frontend]
+[service-frontend](https://github.com/Fe1br0/kube-homeworks/blob/main/1.5/service-frontend.yaml)
 
+![3](https://github.com/Fe1br0/kube-homeworks/assets/106814458/a60c464b-60a9-4c6a-95f9-b2dafc91f255)
 
 
 4. Продемонстрировать, что приложения видят друг друга с помощью Service.
 
+![4](https://github.com/Fe1br0/kube-homeworks/assets/106814458/39acbbca-705b-4f4c-a115-b283949768d9)
 
 
 ------
@@ -56,11 +62,13 @@
 
 1. Включить Ingress-controller в MicroK8S.
 
+![5](https://github.com/Fe1br0/kube-homeworks/assets/106814458/1aa483da-111d-4c9c-bb5d-80a4695c1107)
 
 
 2. Создать Ingress, обеспечивающий доступ снаружи по IP-адресу кластера MicroK8S так, чтобы при запросе только по адресу 
 открывался _frontend_ а при добавлении /api - _backend_.
 
+![6](https://github.com/Fe1br0/kube-homeworks/assets/106814458/9077ef7a-c098-49eb-a62f-c4b37a9d8471)
 
 
 
@@ -70,9 +78,13 @@
 front
 
 
+![8](https://github.com/Fe1br0/kube-homeworks/assets/106814458/fabe03fb-2d45-414a-9fbe-fb8c91c54b37)
+
+
 
 back
 
+![9](https://github.com/Fe1br0/kube-homeworks/assets/106814458/62defcaf-34d3-493b-b20e-bd591e2e7d5a)
 
 
 ------
