@@ -34,7 +34,7 @@
 
 1. Создать Deployment приложения, состоящего из двух контейнеров (nginx и multitool), с количеством реплик 3 шт.
 
-[deployment-1]
+[deployment-1](https://github.com/Fe1br0/kube-homeworks/blob/main/1.4/deployment-1.yaml)
 
 
 ```yaml
@@ -74,10 +74,11 @@ spec:
               memory: 512Mi
 ```
 
+![1](https://github.com/Fe1br0/kube-homeworks/assets/106814458/49329760-b4ba-4211-af6a-352d1959b525)
 
 2. Создать Service, который обеспечит доступ внутри кластера до контейнеров приложения из п.1 по порту 9001 — nginx 80, по 9002 — multitool 8080.
 
-[service-1)]
+[service-1](https://github.com/Fe1br0/kube-homeworks/blob/main/1.4/service-1.yaml)
 
 ```yaml
 apiVersion: v1
@@ -95,11 +96,12 @@ spec:
   selector:
     app: nginx
 ```
+![2](https://github.com/Fe1br0/kube-homeworks/assets/106814458/0681778d-c437-4f4a-abc9-8b33377c0db5)
 
 
 3. Создать отдельный Pod с приложением multitool и убедиться с помощью `curl`, что из пода есть доступ до приложения из п.1 по разным портам в разные контейнеры.
 
-[pod-1]
+[pod-1](https://github.com/Fe1br0/kube-homeworks/blob/main/1.4/pod-1.yaml)
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -117,12 +119,16 @@ spec:
         - name: HTTPS_PORT
           value: "10443"
 ```
+![3](https://github.com/Fe1br0/kube-homeworks/assets/106814458/2736c173-e8e9-48de-a26b-bfcd932fe6c6)
 
 
+![4](https://github.com/Fe1br0/kube-homeworks/assets/106814458/384cf04b-6ba8-49f8-990b-634efcef0cc0)
 
 4. Продемонстрировать доступ с помощью `curl` по доменному имени сервиса. 
 
 
+
+![5](https://github.com/Fe1br0/kube-homeworks/assets/106814458/86cb9222-2090-49ee-a5cf-148f464696ae)
 
 ------
 
@@ -136,7 +142,7 @@ spec:
 
 1. Создать отдельный Service приложения из Задания 1 с возможностью доступа снаружи кластера к nginx, используя тип NodePort.
 
-[service-2]
+[service-2](https://github.com/Fe1br0/kube-homeworks/blob/main/1.4/service-2.yaml)
 
 ```yaml
 apiVersion: v1
@@ -157,9 +163,11 @@ spec:
     app: nginx
   type: NodePort
 ```
+![6](https://github.com/Fe1br0/kube-homeworks/assets/106814458/a9011111-2afa-4bcc-a648-f27d87723c94)
 
 
 2. Продемонстрировать доступ с помощью браузера или `curl` с локального компьютера.
 
+![7](https://github.com/Fe1br0/kube-homeworks/assets/106814458/2de86d02-237b-49b6-9fe8-a89c8a045dbb)
 
 
