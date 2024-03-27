@@ -36,14 +36,17 @@
 
 ### Ответ
 
+[deployment1.yaml](https://github.com/Fe1br0/kube-homeworks/blob/main/2.1/deployment1.yaml)
+
 Выполняем команду 
 
 ```bash
 kubectl exec deployment-5b6db59d-9svp9 -it multitool -- tail -n 10 /my/output.txt
 ```
 
+![1](https://github.com/Fe1br0/kube-homeworks/assets/106814458/fef00418-7c02-473e-9158-9124a1fdcb49)
 
-[deployment1.yaml]
+
 
 ------
 
@@ -60,11 +63,14 @@ kubectl exec deployment-5b6db59d-9svp9 -it multitool -- tail -n 10 /my/output.tx
 
 ### Ответ
 
+[deployment2.yaml](https://github.com/Fe1br0/kube-homeworks/blob/main/2.1/deployment2.yaml)
+
 Воспользовался возможностью чтения файла /var/log/alternatives.log в кластере Minikube.
 
+![2](https://github.com/Fe1br0/kube-homeworks/assets/106814458/501b4848-6518-4baf-a9e4-d1184485fd0b)
 
 
-[deployment2.yaml]
+
 ------
 
 ### Правила приёма работы
