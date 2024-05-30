@@ -46,10 +46,13 @@
 
 * Создал ВМ в яндекс облаке 
 
+![1](https://github.com/Fe1br0/kube-homeworks/assets/106814458/e359e076-9609-4778-8e06-3f3b6abfe7fe)
 
 
 
 * Подключился к нашей мастер ноде
+
+![2](https://github.com/Fe1br0/kube-homeworks/assets/106814458/c31fc978-8e79-4fcf-9d65-325a86c6519b)
 
 
 
@@ -117,7 +120,10 @@ containerd config default > /etc/containerd/config.toml
 
 * Правим `config.toml`
 
-![alt text](image-2.png)
+
+![3](https://github.com/Fe1br0/kube-homeworks/assets/106814458/9ff7f744-f978-411a-8406-e6f0539d9b50)
+
+
 
 * Перезапускаем сервис containerd и добавляем в автозагрузку сервис kubelet
 
@@ -293,9 +299,13 @@ root@worker-01:~#
 
 * Проверяем удачно ли прошло добавление воркер ноды
 
+![5](https://github.com/Fe1br0/kube-homeworks/assets/106814458/510399ca-c4a7-4891-8bc3-8173d6cebd90)
 
 
 * Аналогично настраиваем остальные хосты
 
+![4](https://github.com/Fe1br0/kube-homeworks/assets/106814458/7464a54a-e43e-4781-ad96-196d71ae348d)
 
+
+![6](https://github.com/Fe1br0/kube-homeworks/assets/106814458/4217412c-747f-4445-825e-c31ce29d0199)
 
