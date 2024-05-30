@@ -29,31 +29,39 @@ kubectl apply -f https://raw.githubusercontent.com/netology-code/kuber-homeworks
 
 ```Запустил предложенный в задании task.yaml```
 
+![1](https://github.com/Fe1br0/kube-homeworks/assets/106814458/fd1c046f-27ee-4dd8-9823-9bf19b9aa013)
 
  ```По ошибкам стало понятно, что в кластере нет namespace'ов web и data. Создал эти два namespace'a```
 
+![2](https://github.com/Fe1br0/kube-homeworks/assets/106814458/066c0651-2222-4f9b-9cde-e7c7f2268b49)
 
 
  ```Повторяю попытку запуска task.yaml , в этот раз успешно ```
 
 
+![3](https://github.com/Fe1br0/kube-homeworks/assets/106814458/e00e13f8-63dd-428e-bb7c-458abcd965f0)
 
  ``` Проверяю , что было создано ```
+
+![4](https://github.com/Fe1br0/kube-homeworks/assets/106814458/b5684aad-eac1-4c7f-bcb9-9faec89306a6)
 
 
 
 ```Видим, что все ресурсы созданы корректно в пространствах имен data и web. Для дальнейшего поиска проблемы оценим логи deployment'ов `auth-db` и `web-consumer` ```
 
 
+![7](https://github.com/Fe1br0/kube-homeworks/assets/106814458/5fab6e77-6a68-401b-9e2f-cbe701c9dcbb)
 
-```Из логов видно, что под web-consumer-5f87765478-pzrfd не может выполнить разрешение имени `auth-db`. Для уточнения ситуации попробуем выполнить разрешение имени `auth-db` изнутри пода ```
+```Из логов видно, что под web-consumer не может выполнить разрешение имени `auth-db`. Для уточнения ситуации попробуем выполнить разрешение имени `auth-db` изнутри пода ```
+
+![11](https://github.com/Fe1br0/kube-homeworks/assets/106814458/508fb4b9-0926-45de-aa53-a26c40f01bd3)
+
+```Разрешение имени не работает также изнутри пода. Попробуем выполнить разрешение изнутри пода по полному имени```
 
 
+![10](https://github.com/Fe1br0/kube-homeworks/assets/106814458/af5d3537-722a-4f33-b069-0df020e8086c)
 
-* Разрешение имени не работает также изнутри пода. Попробуем выполнить разрешение изнутри пода по полному имени
-
-
-* Видим, что по полному имени разрешение изнутри пода работает. Соотвественно, необходимо выполнить редактирование манифеста для deployment'a `web-consumer`, заменив в нем сокращенное имя `auth-db` на полное имя `auth-db.data.svc.cluster.local` в следующем фрагменте конфигурации в блоке `- command:`
+```Видим, что по полному имени разрешение изнутри пода работает. Соотвественно, необходимо выполнить редактирование манифеста для deployment'a `web-consumer`, заменив в нем сокращенное имя `auth-db` на полное имя `auth-db.data.svc.cluster.local` в следующем фрагменте конфигурации в блоке `- command:` ```
 
 ```bash
 kubectl -n web edit deployments web-consumer
@@ -74,12 +82,13 @@ kubectl -n web edit deployments web-consumer
 kubectl -n web edit deployments web-consumer
 deployment.apps/web-consumer edited
 ```
-* Вновь оценим логи  web-consumer
+``` Вновь оценим логи  web-consumer ```
+
+![9](https://github.com/Fe1br0/kube-homeworks/assets/106814458/7f0ecfa0-68ac-42b9-8fe6-5fd04397c7c0)
 
 
 
-Логи `web-consumer`
 
 
 
-* Приложение web-consumer получило доступ к приложению auth-db. Проблема решена.
+``` Приложение web-consumer получило доступ к приложению auth-db. Проблема решена. ```
