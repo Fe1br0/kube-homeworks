@@ -35,7 +35,7 @@
 
 * Создаем виртуальные машины
 
-![Alt text](../../../../d:/Git/kube-homeworks/3.3/1.jpg)
+![1](https://github.com/Fe1br0/kube-homeworks/blob/main/3.3/1.jpg)
 
 
 * Выполним подготовку kubespray
@@ -51,7 +51,7 @@ declare -a IPS=(10.131.0.29 10.131.0.7 10.131.0.18 10.131.0.20)
 
 * Сгенерируем inventory-файл `hosts.yaml` для Ansible 
 
-![Alt text](../../../../d:/Git/kube-homeworks/3.3/3.jpg)
+![2](https://github.com/Fe1br0/kube-homeworks/blob/main/3.3/3.jpg)
 
 * Необходимо отредактировать файл inventory hosts.yaml таким образом, чтобы:
 
@@ -60,8 +60,7 @@ declare -a IPS=(10.131.0.29 10.131.0.7 10.131.0.18 10.131.0.20)
 3. Etcd-компонент оставался только на мастер-узле.
 
 
-![Alt text](../../../../d:/Git/kube-homeworks/3.3/2.jpg)
-
+![3](https://github.com/Fe1br0/kube-homeworks/blob/main/3.3/2.jpg)
 
 * Скопируем закрытый ключ с локальной машины на мастер-ноду
 
