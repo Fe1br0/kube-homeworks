@@ -60,7 +60,7 @@ declare -a IPS=(10.131.0.29 10.131.0.7 10.131.0.18 10.131.0.20)
 3. Etcd-компонент оставался только на мастер-узле.
 
 
-![3](https://github.com/Fe1br0/kube-homeworks/blob/main/3.3/2.jpg)
+![3](https://github.com/Fe1br0/kube-homeworks/blob/main/3.3/4.jpg)
 
 * Скопируем закрытый ключ с локальной машины на мастер-ноду
 
