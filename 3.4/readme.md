@@ -52,7 +52,7 @@
 ## Задание 1 
 
 ```
-я бы выбрал стратегию обновления развертывания с помощью Rolling Update
+Я бы выбрал стратегию обновления развертывания с помощью Rolling Update
 
 1. Ограниченные ресурсы и запас в 20% в менее загруженный момент.
    - Стратегия Rolling Update позволяет обновлять приложение постепенно, заменяя старые реплики на новые. Таким образом, мы не перегружаем кластер и можем обновляться без простоев.
@@ -72,7 +72,7 @@
 
 * Создал виртуальные машины в яндекс облаке 
 
-![Alt text](../../../../d:/Git/kube-homeworks/3.4/0.jpg)
+![Alt text](https://github.com/Fe1br0/kube-homeworks/blob/main/3.4/0.jpg)
 
 
 
@@ -94,7 +94,7 @@ declare -a IPS=(10.131.0.3 10.131.0.15 10.131.0.34 10.131.0.35)
 
 
 
-![Alt text](../../../../d:/Git/kube-homeworks/3.4/Screenshot_1.jpg)
+![Alt text](https://github.com/Fe1br0/kube-homeworks/blob/main/3.4/Screenshot_1.jpg)
 
 
 ### Обновление приложения 
@@ -103,7 +103,7 @@ declare -a IPS=(10.131.0.3 10.131.0.15 10.131.0.34 10.131.0.35)
 
 
 
-![Alt text](../../../../d:/Git/kube-homeworks/3.4/2.jpg)
+![Alt text](https://github.com/Fe1br0/kube-homeworks/blob/main/3.4/2.jpg)
 
 
 
@@ -111,7 +111,7 @@ declare -a IPS=(10.131.0.3 10.131.0.15 10.131.0.34 10.131.0.35)
 
 
 
-![Alt text](../../../../d:/Git/kube-homeworks/3.4/3.jpg)
+![Alt text](https://github.com/Fe1br0/kube-homeworks/blob/main/3.4/3.jpg)
 
 
 
@@ -119,7 +119,7 @@ declare -a IPS=(10.131.0.3 10.131.0.15 10.131.0.34 10.131.0.35)
 
 
 
-![Alt text](../../../../d:/Git/kube-homeworks/3.4/4.jpg)
+![Alt text](https://github.com/Fe1br0/kube-homeworks/blob/main/3.4/4.jpg)
 
 
 
@@ -131,7 +131,7 @@ declare -a IPS=(10.131.0.3 10.131.0.15 10.131.0.34 10.131.0.35)
 
 
 
-![Alt text](../../../../d:/Git/kube-homeworks/3.4/5.jpg)
+![Alt text](https://github.com/Fe1br0/kube-homeworks/blob/main/3.4/5.jpg)
 
 
 
@@ -141,7 +141,7 @@ declare -a IPS=(10.131.0.3 10.131.0.15 10.131.0.34 10.131.0.35)
 
 
 
-![Alt text](../../../../d:/Git/kube-homeworks/3.4/6.jpg)
+![Alt text](https://github.com/Fe1br0/kube-homeworks/blob/main/3.4/6.jpg)
 
 
 
@@ -152,7 +152,7 @@ declare -a IPS=(10.131.0.3 10.131.0.15 10.131.0.34 10.131.0.35)
 
 
 
-![Alt text](../../../../d:/Git/kube-homeworks/3.4/7.jpg)
+![Alt text](https://github.com/Fe1br0/kube-homeworks/blob/main/3.4/7.jpg)
 
 
 
@@ -161,7 +161,7 @@ declare -a IPS=(10.131.0.3 10.131.0.15 10.131.0.34 10.131.0.35)
 
 
 
-![Alt text](../../../../d:/Git/kube-homeworks/3.4/8.jpg)
+![Alt text](https://github.com/Fe1br0/kube-homeworks/blob/main/3.4/8.jpg)
 
 
 
@@ -171,5 +171,5 @@ declare -a IPS=(10.131.0.3 10.131.0.15 10.131.0.34 10.131.0.35)
 
 
 
-![Alt text](../../../../d:/Git/kube-homeworks/3.4/9.jpg)
+![Alt text](https://github.com/Fe1br0/kube-homeworks/blob/main/3.4/9.jpg)
 
