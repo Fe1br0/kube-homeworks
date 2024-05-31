@@ -52,25 +52,33 @@ compute-default-zone: ru-central1-b
 
 * Проверим конфигурацию Terraform для созданного файла netology.tf
 
-```bash
-PS D:\Git\kube-homeworks\15.1> terraform validate
-Success! The configuration is valid.
-```
+![1](https://github.com/Fe1br0/kube-homeworks/assets/106814458/b993e710-c33a-4250-b464-ffacf8fa45f3)
 
 
 * Запустим создание ресурсов с помощью Terraform:
 ```bash
 > terraform apply --auto-approve 
 ```
+![2](https://github.com/Fe1br0/kube-homeworks/assets/106814458/fdaa8e02-ec7f-48e7-bffc-f2f95738eadb)
 
+![3](https://github.com/Fe1br0/kube-homeworks/assets/106814458/69a5e66d-91f6-49f3-b024-a26925f89941)
+
+![5](https://github.com/Fe1br0/kube-homeworks/assets/106814458/3f35c12e-3344-4fa1-b8b9-d878897004fb)
+![4](https://github.com/Fe1br0/kube-homeworks/assets/106814458/a7686e55-892a-478f-b1c7-572d15f13491)
 
 * Убедимся, что в сети с именем network-netology созданы подсети public и private (при этом private с route table):
 
 
+![6](https://github.com/Fe1br0/kube-homeworks/assets/106814458/76e5f645-fd6e-419f-a8c4-c92afc5e892f)
+
 * Убедимся, что созданы виртуальные машины nat-instance, public-instance и private-instance:
+  
+![7](https://github.com/Fe1br0/kube-homeworks/assets/106814458/778291dc-41ef-48a7-a72e-db5c1003c7b6)
 
 
 * Подключаемся к публичной машине и проверяем наличие соединения с интернетом
+
+![10](https://github.com/Fe1br0/kube-homeworks/assets/106814458/623806de-1922-49e8-8e57-f3743b8ffa81)
 
 
 * Виртуальная машина private-instance не имеет внешнего IP-адреса. Подключение к данной виртуальной машине выполним через виртуальную машину public-instance, скопировав на нее приватный ключ ssh:
@@ -78,7 +86,7 @@ Success! The configuration is valid.
 ```bash
 C:\Users\Fel>scp C:\Users\Fel\.ssh\id_rsa ubuntu@158.160.90.172:/home/ubuntu/.ssh/id_rsa
 ```
-*Изменим права доступа ключа
+* Изменим права доступа ключа
 
 ```
 chmod 0600 /home/ubuntu/.ssh/id_rsa
@@ -86,5 +94,11 @@ chmod 0600 /home/ubuntu/.ssh/id_rsa
 
 
 
+
+
 * Находясь на виртуальной машине private-instance, проверим доступ в Интернет:
 
+![9](https://github.com/Fe1br0/kube-homeworks/assets/106814458/b25530d0-e975-4e18-9ea7-c9268fef3ed2)
+
+
+[Файл netology.tf](https://github.com/Fe1br0/kube-homeworks/blob/main/15.1/netology.tf)
